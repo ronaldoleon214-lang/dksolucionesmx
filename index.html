@@ -90,5 +90,38 @@
   <body class="bg-white text-[#0c131f] antialiased selection:bg-[#8ba5d2] selection:text-[#0c131f]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Chat de GoHighLevel (Victoria - asesora virtual DK Soluciones) -->
+    <script>
+      // Oculta las burbujas vacias (mensaje de bienvenida en blanco) dentro del widget
+      (function () {
+        function walk(root, depth) {
+          if (!root || depth > 5) return;
+          root.querySelectorAll('.message-container').forEach(function (m) {
+            var b = m.querySelector('.bubble');
+            if (!b || !b.querySelector('.footer')) return;
+            var slot = b.querySelector('slot');
+            var text = '';
+            var rich = false;
+            if (slot) {
+              slot.assignedNodes({ flatten: true }).forEach(function (n) {
+                text += n.textContent || '';
+                if (n.querySelector && n.querySelector('img,audio,video,a,button,input')) rich = true;
+              });
+            }
+            m.style.display = text.replace(/[\s​]/g, '') === '' && !rich ? 'none' : '';
+          });
+          root.querySelectorAll('*').forEach(function (e) {
+            if (e.shadowRoot) walk(e.shadowRoot, depth + 1);
+          });
+        }
+        setInterval(function () { walk(document, 0); }, 400);
+      })();
+    </script>
+    <script
+      src="https://widgets.leadconnectorhq.com/loader.js"
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="6b073ee829fc2dc00fa5879e"
+    ></script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { AboutSection } from './components/AboutSection';
 import { CatalogSection } from './components/CatalogSection';
-import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { KpaxSection } from './components/KpaxSection';
@@ -81,7 +80,6 @@ export function App() {
         </Reveal>
       </main>
       <Footer onOpenLegal={setLegalDoc} />
-      <FloatingWhatsApp />
       <LegalModal docType={legalDoc} onClose={() => setLegalDoc(null)} />
     </div>
   );
