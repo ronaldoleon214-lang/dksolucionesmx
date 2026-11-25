@@ -5,7 +5,7 @@ export const BRAND = {
   whatsappNumber: '529932084747',
   whatsappDisplay: '993 208 4747',
   phoneDisplay: '993 658 1877',
-  email: 'mediosdigitales@dksolucionesmx.com',
+  email: 'ventas.mostrador@dksolucionesmx.com',
   address: 'Pagés Llergo 126 Planta Baja (PB), Col. Centro, C.P. 86000, Villahermosa, Tabasco, México',
   logoUrl:
     'https://storage.e.jimdo.com/cdn-cgi/image/quality=85%2Cfit=scale-down%2Cformat=auto%2Ctrim=0;0;0;0%2Cwidth=320%2Cheight=132/image/517499807/6ec5bd76-78b6-4267-9f10-e91f013c6eb7.png',

@@ -21,9 +21,9 @@ const SERVICE_OPTIONS = [
 ];
 
 const VOLUME_OPTIONS = [
-  'Menos de 3,000 páginas/mes',
-  '3,000 a 10,000 páginas/mes',
-  '10,000 a 30,000 páginas/mes',
+  'Hasta 7,000 páginas/mes',
+  '7,000 a 15,000 páginas/mes',
+  '15,000 a 30,000 páginas/mes',
   'Más de 30,000 páginas/mes',
 ];
 

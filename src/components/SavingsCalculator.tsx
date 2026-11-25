@@ -24,10 +24,15 @@ export function SavingsCalculator({ onSelectPlan }: SavingsCalculatorProps) {
   const monthlyDk = monthlyPages * dkCostPerPage;
   const annualSavings = (monthlyTraditional - monthlyDk) * 12;
 
+  // Mismo criterio que el catálogo y que Victoria (agente de chat):
+  // C3135 hasta 7,000 págs/mes, C4165 hasta 15,000; arriba de eso, varias C4165.
+  const c4165Units = Math.ceil(monthlyPages / 15000);
   const recommendedModel =
-    monthlyPages > 10000
-      ? { name: 'Katun Arivia C4165 (65 PPM)', sku: '602K1018' }
-      : { name: 'Katun Arivia C3135 (35 PPM)', sku: '602K1012' };
+    monthlyPages <= 7000
+      ? { name: 'Katun Arivia C3135 (35 PPM)', sku: '602K1012' }
+      : c4165Units === 1
+        ? { name: 'Katun Arivia C4165 (65 PPM)', sku: '602K1018' }
+        : { name: `${c4165Units} equipos Katun Arivia C4165 (65 PPM)`, sku: '602K1018' };
 
   function handleApplyRecommendation() {
     onSelectPlan(
