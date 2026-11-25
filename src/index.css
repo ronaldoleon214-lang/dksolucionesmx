@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dk-navy: #0c131f;
+  --color-dk-navy-light: #131e30;
+  --color-dk-black: #000000;
+  --color-dk-periwinkle: #8ba5d2;
+  --color-dk-periwinkle-hover: #97aed7;
+  --color-dk-card-blue: #284069;
+  --color-dk-ink-muted: #9ea1a5;
+  --color-dk-ink-blue: #d1dbed;
+  --color-dk-success: #398261;
+  --color-dk-error: #e03138;
+
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-body: "Roboto", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    scroll-padding-top: 84px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.bg-grid-slate {
+  background-image: radial-gradient(rgba(139, 165, 210, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
