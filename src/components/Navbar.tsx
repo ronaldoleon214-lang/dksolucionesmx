@@ -26,19 +26,22 @@ export function Navbar({ quoteCount }: NavbarProps) {
             Distribuidora de Kopiadoras de Tabasco S.A.S. de C.V. · Villahermosa y Sureste de
             México
           </span>
-          <div className="flex items-center gap-5">
-            <a href="tel:9936581877" className="inline-flex items-center gap-1.5 hover:text-white">
+          <div className="flex items-center gap-2.5">
+            <a
+              href="tel:9936581877"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-0.5 text-[11px] font-semibold text-white transition-colors hover:border-[#8ba5d2] hover:bg-white/10"
+            >
               <Phone className="h-3 w-3 text-[#8ba5d2]" />
-              <span>{BRAND.phoneDisplay}</span>
+              <span>Llámanos</span>
             </a>
             <a
               href={buildWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#8ba5d2] px-3 py-0.5 text-[11px] font-bold text-[#0c131f] transition-colors hover:bg-[#97aed7]"
             >
-              <MessageCircle className="h-3 w-3 text-[#8ba5d2]" />
-              <span>WhatsApp: {BRAND.whatsappDisplay}</span>
+              <MessageCircle className="h-3 w-3" />
+              <span>Escríbenos por WhatsApp</span>
             </a>
           </div>
         </div>

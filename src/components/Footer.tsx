@@ -34,20 +34,21 @@ export function Footer({ onOpenLegal }: FooterProps) {
               <span>{BRAND.address}</span>
             </li>
             <li className="flex items-center gap-2.5">
-              <Phone className="h-4 w-4 shrink-0 text-[#8ba5d2]" />
-              <a href="tel:9936581877" className="hover:text-white">
-                {BRAND.phoneDisplay}
+              <a
+                href="tel:9936581877"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:border-[#8ba5d2]"
+              >
+                <Phone className="h-3.5 w-3.5 text-[#8ba5d2]" />
+                <span>Llamar a oficina</span>
               </a>
-            </li>
-            <li className="flex items-center gap-2.5">
-              <MessageCircle className="h-4 w-4 shrink-0 text-[#8ba5d2]" />
               <a
                 href={buildWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full bg-[#8ba5d2] px-3.5 py-1.5 text-xs font-bold text-[#0c131f] transition-colors hover:bg-[#97aed7]"
               >
-                WhatsApp: {BRAND.whatsappDisplay}
+                <MessageCircle className="h-3.5 w-3.5" />
+                <span>Escríbenos</span>
               </a>
             </li>
             <li className="flex items-center gap-2.5">

@@ -110,8 +110,16 @@ export function QuoteSection({
             Comienza a ahorrar en tus impresiones hoy mismo.
           </h2>
           <p className="mt-3 text-base leading-relaxed text-[#d1dbed]">
-            Completa el formulario o envía tu lista de productos Katun Arivia directo por WhatsApp
-            al <strong className="text-white">993 208 4747</strong>.
+            Completa el formulario o{' '}
+            <a
+              href={buildWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white underline decoration-[#8ba5d2] underline-offset-4 hover:text-[#8ba5d2]"
+            >
+              escríbenos directo por WhatsApp
+            </a>{' '}
+            para recibir atención inmediata.
           </p>
 
           <div className="mt-6 space-y-3 border-t border-white/15 pt-6">
